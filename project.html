@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>Responsive Personal Portfolio Website Design Wajdi</title>
+
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+       <header class="header">
+        <a href="#" class="logo">Portfolio</a>
+       
+        <i class='bx bx-menu' id="menu-icon"></i>
+        
+        <nav class="navbar">
+            <a href="index.html" target="_blank">Home</a>
+            <a href="about.html" target="_blank">About</a>
+            <a href="skills.html" target="_blank">Skills</a>
+            <a href="project.html" target="_blank"  class="active">Project</a>
+            <a href="contact.html" target="_blank">Contact</a>
+        </nav>
+    </header>
+    
+
+    <section class="project" id="project">
+        <h2 class="heading">Latest <span>Project</span></h2>
+        
+        <div class="project-container">
+            <div class="project-box">
+                <img src="images/atm.png" alt="" width="600" height="400">
+                <div class="project-layer">
+                    <h4>ATM Banking</h4>
+                    <p>This program provides users with the ability to make deposits, withdrawals, and view their account information through a simple ATM interface.
+                       The program will continue to run until the user selects the "Exit" option.</p>
+                    <p> Technologies used: Java</p>
+             <a href="https://github.com/Aidilwajdi/ATM.git" target="blank" class="btn">View Code</a>
+                </div>
+            </div>
+            
+            <div class="project-box">
+                <img src="images/bmi1.png" alt="" width="600" height="400">
+                <div class="project-layer">
+                    <h4>BMI Calculate</h4>
+                    <p>The program above is a simple BMI (Body Mass Index) calculator written in the Java programming language.
+                       BMI is a measure used to assess a person's weight status based on weight and height.</p>
+                      <p> Technologies used: Java</p>
+             <a href="https://github.com/Aidilwajdi/bmi.git" target="blank" class="btn">View Code</a>
+                </div>
+            </div>  
+            <div class="project-box">
+                <img src="images/email.png" alt="" width="600" height="400">
+                <div class="project-layer">
+                    <h4>System Email</h4>
+                    <p>This program is displaying emails in alice and bob's mailbox. 
+                       This program shows the relationship between users, emails, and mailboxes in a simple system.</p>
+                      <p> Technologies used: Java</p>
+             <a href="https://github.com/Aidilwajdi/Email.git" target="blank" class="btn">View Code</a>
+                </div>
+            </div>
+    </section>
+    
+       <footer class="footer">
+        <div class="footer-text">
+            <p>Copyright &copy; 2023 by Wajdi All Rights Reserved.</p>
+        </div>
+        
+        <div class="footer-iconTop">
+             <a href="index.html"><i class='bx bx-up-arrow-alt'></i></a>
+        </div>
+    
+<script src="https://unpkg.com/scrollreveal"></script>
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+<script src="js/script.js"></script>
+
+<script>
+    const navLinks = document.querySelectorAll('header nav a');
+
+    // Tambahkan "click" event listener ke setiap pautan
+    navLinks.forEach(link => {
+        link.addEventListener('click', function (event) {
+            event.preventDefault();
+
+            const targetId = this.getAttribute('href').substring(1);
+
+            const targetElement = document.getElementById(targetId);
+
+            if (targetElement) {
+                window.open(this.getAttribute('href'), '_blank');
+            }
+        });
+    });
+</script>
+
+</body>
+</html>

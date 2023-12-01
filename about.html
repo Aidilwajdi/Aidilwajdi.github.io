@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Personal Portfolio Website Design Wajdi</title>
+
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+       <header class="header">
+        <a href="#" class="logo">Portfolio</a>
+       
+         <i class='bx bx-menu' id="menu-icon"></i>
+        
+        <nav class="navbar">
+            <a href="index.html" target="_blank">Home</a>
+            <a href="about.html" target="_blank"  class="active" class="active">About</a>
+            <a href="skills.html" target="_blank">Skills</a>
+            <a href="project.html" target="_blank">Project</a>
+            <a href="contact.html" target="_blank">Contact</a>
+        </nav>
+    </header>
+    
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="images/about.png" alt="">
+        </div>
+        <div class="about-content">
+      <h2 class="heading">About <span>Me</span></h2>
+            <h3>Full-Stack Developer</h3>
+            <p>I am an IT student at Universiti Sultan Zainal Abidin who has just ventured into the field of designing this website. 
+               I entered this field because I am very interested in the creation of something new that can benefit other users and be able to improve my skills and experience in this field.
+               I am also very interested in the world of programming. 
+               My expertise is creating web designs, graphic designers, digital marketing and more...</p>
+    </div>
+</section>
+    
+      <footer class="footer">
+        <div class="footer-text">
+            <p>Copyright &copy; 2023 by Wajdi All Rights Reserved.</p>
+        </div>
+        
+        <div class="footer-iconTop">
+             <a href="index.html"><i class='bx bx-up-arrow-alt'></i></a>
+        </div>
+    
+<script src="https://unpkg.com/scrollreveal"></script>
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+<script src="js/script.js"></script>
+
+<script>
+    const navLinks = document.querySelectorAll('header nav a');
+
+    // Tambahkan "click" event listener ke setiap pautan
+    navLinks.forEach(link => {
+        link.addEventListener('click', function (event) {
+            event.preventDefault();
+
+            const targetId = this.getAttribute('href').substring(1);
+
+            const targetElement = document.getElementById(targetId);
+
+            if (targetElement) {
+                window.open(this.getAttribute('href'), '_blank');
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
